@@ -40,11 +40,7 @@ param (
 # ImDone Tasks:
 # =======================
 #
-# DOING:10 **{{source.path}}** Add license and github info.
-#
-# TODO **{{source.path}}** Sign this script?.
-#
-# NOTE **{{source.path}}** Consider an output format that can be used in Powershell pipes.
+# TODO:0 **{{source.path}}** Consider an output format that can be used in Powershell pipes.
 
 # Check whether Chocolatey is installed
 if ( $Env:ChocolateyInstall -eq $Null )
@@ -99,7 +95,6 @@ class Relations
       else
       {
          # Return empty list
-         # NOTE **{{source.path}}** May need to differ between non-existent and empty?
          [System.Collections.ArrayList] $emptylist = @()
          return $emptylist
       }
