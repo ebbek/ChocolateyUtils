@@ -13,7 +13,7 @@ The purpose of ```Choco-Dependencies``` is:
   your system.
 
 If ```Choco-Dependencies``` is started without any package names supplied, it will show the
-dependencies or dependants of all packages. You may 
+dependencies or dependants of all packages. You may select one or more packages as follows:
 
 ```ps1
 Choco-Dependencies packagenamelist
@@ -21,7 +21,7 @@ Choco-Dependencies packagenamelist
 
 where:
 ```bnf
-packagenamelist := packagename[, packagenamelist]
+packagenamelist := packagename [, packagenamelist]
 ```
 
 To show dependants, run the utility as follows:
