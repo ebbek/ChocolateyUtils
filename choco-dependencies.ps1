@@ -41,6 +41,7 @@ param (
 # =======================
 #
 # TODO:0 **{{source.path}}** Consider an output format that can be used in Powershell pipes.
+# +deferred
 
 # Check whether Chocolatey is installed
 if ( $Env:ChocolateyInstall -eq $Null )
