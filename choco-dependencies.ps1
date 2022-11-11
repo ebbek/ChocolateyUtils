@@ -1,5 +1,3 @@
-#! /usr/bin/env pwsh
-
 <# 
    .SYNOPSIS
    Chocolatey package dependency analysis utility.
@@ -42,6 +40,13 @@ param (
 #
 # TODO:0 **{{source.path}}** Consider an output format that can be used in Powershell pipes.
 # +deferred
+
+# Chocolatey is Windows only
+if ( [System.Environment]::OSVersion.Platform -ne 'Win32NT' )
+{
+   Write-Error "`nThis utility runs on Windows only."
+   exit -1
+}
 
 # Check whether Chocolatey is installed
 if ( $Env:ChocolateyInstall -eq $Null )
