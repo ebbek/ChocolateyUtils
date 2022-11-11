@@ -13,6 +13,9 @@
 
    This utility will access the .nuspec files located in $Env:ChocolateyInstall\lib package subdirectories.
 
+   The output from this utility is text written on stdout. You may pipe this into your favourite pager but
+   that is about it.
+
    .INPUTS
    None.
  
