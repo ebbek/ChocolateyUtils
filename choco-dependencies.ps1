@@ -21,6 +21,9 @@
  
    .OUTPUTS
    None.
+
+   .LINK
+   https://github.com/ebbek/ChocolateyUtils
 #>
 
 param (
