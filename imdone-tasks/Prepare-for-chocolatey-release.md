@@ -1,4 +1,4 @@
-[Prepare for chocolatey release.](#TODO:-10)
+[Prepare for chocolatey release.](#DOING:-10)
 [ ]  Read up on how to create a chocolatey package
 [ ]  Create it
 [ ]  Release it
