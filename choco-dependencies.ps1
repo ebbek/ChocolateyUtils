@@ -133,12 +133,14 @@ function Collect-FileDependencies()
       $elements.package.metadata.dependencies.dependency.id | foreach { 
          if ( $Reverse )
          {
-            # Collecting reverse dependencies.
+            # Collecting reverse dependencies: The package name is stored in the entry indexed by
+            # the dependency.
             $dependencies.add_relation( $_, $packagename )
          }
          else
          {
-            # Collectiong ordinary dependencies.
+            # Collectiong ordinary dependencies: The dependency is stored in the entry indexed by
+            # the package name.
             $dependencies.add_relation( $packagename, $_ )
          }
          # Go on to collect dependencies for the package that was just added.
