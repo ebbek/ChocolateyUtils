@@ -1,5 +1,3 @@
-#! /usr/bin/env pwsh
-
 <# 
    .SYNOPSIS
    Chocolatey package dependency analysis utility.
@@ -15,11 +13,17 @@
 
    This utility will access the .nuspec files located in $Env:ChocolateyInstall\lib package subdirectories.
 
+   The output from this utility is text written on stdout. You may pipe this into your favourite pager but
+   that is about it.
+
    .INPUTS
    None.
  
    .OUTPUTS
    None.
+
+   .LINK
+   https://github.com/ebbek/ChocolateyUtils
 #>
 
 param (
@@ -42,6 +46,13 @@ param (
 #
 # TODO:0 **{{source.path}}** Consider an output format that can be used in Powershell pipes.
 # +deferred
+
+# Chocolatey is Windows only
+if ( [System.Environment]::OSVersion.Platform -ne 'Win32NT' )
+{
+   Write-Error "`nThis utility runs on Windows only."
+   exit -1
+}
 
 # Check whether Chocolatey is installed
 if ( $Env:ChocolateyInstall -eq $Null )
@@ -122,12 +133,14 @@ function Collect-FileDependencies()
       $elements.package.metadata.dependencies.dependency.id | foreach { 
          if ( $Reverse )
          {
-            # Collecting reverse dependencies.
+            # Collecting reverse dependencies: The package name is stored in the entry indexed by
+            # the dependency.
             $dependencies.add_relation( $_, $packagename )
          }
          else
          {
-            # Collectiong ordinary dependencies.
+            # Collectiong ordinary dependencies: The dependency is stored in the entry indexed by
+            # the package name.
             $dependencies.add_relation( $packagename, $_ )
          }
          # Go on to collect dependencies for the package that was just added.
