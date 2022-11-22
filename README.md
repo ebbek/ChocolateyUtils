@@ -8,7 +8,7 @@ This project contains my Chocolatey utilities, all written in the PowerShell scr
 The purpose of ```Choco-Dependencies``` is:
 
 - To show the dependencies of one or more of the Chocolatey packages that are installed on your
-  system.
+  system or...
 - To show which packages depend on one or more of the Chocolatey packages that are installed on
   your system.
 
@@ -20,7 +20,7 @@ Choco-Dependencies packagenamelist
 ```
 
 where:
-```bnf
+```
 packagenamelist := packagename [, packagenamelist]
 ```
 
