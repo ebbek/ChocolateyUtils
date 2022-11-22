@@ -1,7 +1,10 @@
-# ChocolateyUtils
-Utilities for Chocolatey
+# Chocolatey Utilities
 
 This project contains my Chocolatey utilities, all written in the PowerShell script language.
+
+If you find a bug or have a suggestion for an enhancment, please add it as an issue here:
+
+https://github.com/ebbek/ChocolateyUtils/issues
 
 ## choco-dependencies.ps1
 
