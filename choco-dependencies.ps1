@@ -3,7 +3,7 @@
    Chocolatey package dependency analysis utility.
 
    .DESCRIPTION
-   View dependencies for one or more chocolatey packages.
+   View dependencies for one or more locally installed chocolatey packages.
  
    - Run without parameters to see the dependencies for all installed packages.
    - Provide a package name to see the dependencies for that package.
@@ -46,6 +46,9 @@ param (
 #
 # TODO:0 **{{source.path}}** Consider an output format that can be used in Powershell pipes.
 # +deferred
+#
+# TODO:0 **{{source.path}}** Consider whether a -Verify option that makes the utility check whether a dependency is actually installed.
+# 
 
 # Chocolatey is Windows only
 if ( [System.Environment]::OSVersion.Platform -ne 'Win32NT' )
