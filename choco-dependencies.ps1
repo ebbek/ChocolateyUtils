@@ -32,19 +32,26 @@ param (
    # Show reverse dependencies
    [Alias("r")]
    [switch] $Reverse,
+   # Print version information.
+   [Alias("V")]
+   [switch] $Version,
    # Print this help text.
    [Alias("h")]
    [switch] $Help
 )
 
-# Choco-Dependencies.ps1 Copyleft 2022 by Ebbe Kristensen.
-# LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
-# Open a GitHub issue at https://github.com/ebbek/ChocolateyUtils/issues if you have suggestions for improvement.
+$RELEASE = "0.1.1"
+$COPYRIGHT = "Choco-Dependencies.ps1 Copyleft 2022 by Ebbe Kristensen."
+$LICENSE = "GNU GPL v3 - https://www.gnu.org/licenses/gpl.html"
+$ISSUES = "Open a GitHub issue at https://github.com/ebbek/ChocolateyUtils/issues if you have suggestions for improvement."
 
 # ImDone Tasks:
 # =======================
 #
-# TODO:0 **{{source.path}}** Consider an output format that can be used in Powershell pipes.
+# DONE:-20 **{{source.path}}** Add version information option using GitVersion information.
+# +release-0.1.1
+#
+# TODO:0 **{{source.path}}** Consider an object based output format that can be used in Powershell pipes.
 # +deferred
 #
 # TODO:0 **{{source.path}}** Consider whether a -Verify option that makes the utility check whether a dependency is actually installed.
@@ -239,6 +246,13 @@ Collect-AllDependencies
 if( $Help )
 {
    help "$PSCommandPath"
+}
+elseif ( $Version )
+{
+   Write-Host "Version: $RELEASE"
+   Write-Host "$COPYRIGHT"
+   Write-Host "$LICENSE"
+   Write-Host "$ISSUES"
 }
 elseif ( $packages )
 {

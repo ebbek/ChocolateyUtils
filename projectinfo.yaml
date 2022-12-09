@@ -1,0 +1,11 @@
+---
+# The information that shall be added in this project
+info:
+  COPYRIGHT: Choco-Dependencies.ps1 Copyleft 2022 by Ebbe Kristensen.
+  LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
+  ISSUES: >-
+    Open a GitHub issue at https://github.com/ebbek/ChocolateyUtils/issues if you have suggestions
+    for improvement.
+# List of files in the project to be processed
+files:
+  - choco-dependencies.ps1
