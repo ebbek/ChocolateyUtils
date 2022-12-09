@@ -52,7 +52,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <tags>choco-dependencies SPACE_SEPARATED</tags>
     <summary>View dependencies for one or more locally installed chocolatey packages.</summary>
     <description>
-       Get list of dependencies for a package or get list of packages a package depends on.
+       Get list of packages that package depends on or get a list of packages that depend on a package.
     </description>
     <releaseNotes>First release for Chocolatey</releaseNotes>
     <!-- =============================== -->
