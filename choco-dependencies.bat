@@ -1,2 +1,2 @@
 @echo off
-powershell -NoProfile -ExecutionPolicy unrestricted -Command "& 'C:\Users\ebkr\tools\EKOLOGIC\choco-dependencies.ps1'  %*"
+powershell -NoProfile -ExecutionPolicy unrestricted -Command "& '%ChocolateyToolsLocation%\EKOLOGIC\choco-dependencies.ps1' %*"
