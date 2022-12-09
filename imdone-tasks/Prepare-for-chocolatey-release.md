@@ -3,4 +3,4 @@
 [X]  Create it
 [ ]  Modify it
 [ ]  Release it
-+chocolatey +release-0.1.0
++chocolatey +release-0.1.1
