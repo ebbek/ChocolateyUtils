@@ -1,4 +1,6 @@
 ---
+# Gitversion keyword to use to get the release string
+GITVERSION: MajorMinorPatch
 # The information that shall be added in this project
 info:
   COPYRIGHT: Choco-Dependencies.ps1 Copyleft 2022 by Ebbe Kristensen.
