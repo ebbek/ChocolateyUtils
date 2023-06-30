@@ -51,10 +51,12 @@ $ISSUES = "Open a GitHub issue at https://github.com/ebbek/ChocolateyUtils/issue
 # DONE:-20 **{{source.path}}** Add version information option using GitVersion information.
 # +release-0.1.1
 #
-# TODO:0 **{{source.path}}** Consider an object based output format that can be used in Powershell pipes.
+# BACKLOG **{{source.path}}** Consider an object based output format that can be used in Powershell pipes.
 # +deferred
+# <!-- order:10 -->
 #
-# TODO:0 **{{source.path}}** Consider whether a -Verify option that makes the utility check whether a dependency is actually installed.
+# BACKLOG **{{source.path}}** Consider whether a -Verify option that makes the utility check whether a dependency is actually installed.
+# <!-- order:0 -->
 # 
 
 # Chocolatey is Windows only
