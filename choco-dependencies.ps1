@@ -45,20 +45,6 @@ $COPYRIGHT = "Choco-Dependencies.ps1 Copyleft 2022 by Ebbe Kristensen."
 $LICENSE = "GNU GPL v3 - https://www.gnu.org/licenses/gpl.html"
 $ISSUES = "Open a GitHub issue at https://github.com/ebbek/ChocolateyUtils/issues if you have suggestions for improvement."
 
-# ImDone Tasks:
-# =======================
-#
-# DONE:-20 **{{source.path}}** Add version information option using GitVersion information.
-# +release-0.1.1
-#
-# BACKLOG **{{source.path}}** Consider an object based output format that can be used in Powershell pipes.
-# +deferred
-# <!-- order:10 -->
-#
-# BACKLOG **{{source.path}}** Consider whether a -Verify option that makes the utility check whether a dependency is actually installed.
-# <!-- order:0 -->
-# 
-
 # Chocolatey is Windows only
 if ( [System.Environment]::OSVersion.Platform -ne 'Win32NT' )
 {
